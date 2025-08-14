@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sami Ullah - Full Stack Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      z-index: 1000;
+      padding: 16px;
+    }
+    header h1 {
+      color: #00e5ff;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #00e5ff; }
+    
+    section {
+      padding: 100px 40px;
+      min-height: 100vh;
+    }
+    
+    /* Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00e5ff;
+      box-shadow: 0 0 20px #00e5ff88;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+      color: #00e5ff;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    
+    /* Skills */
+    .skills .bar {
+      margin: 15px 0;
+    }
+    .bar-name {
+      margin-bottom: 5px;
+    }
+    .bar-fill {
+      background: #222;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .bar-fill div {
+      height: 20px;
+      background: linear-gradient(90deg, #00e5ff, #7c5cff);
+      width: 0;
+      animation: fill 2s forwards;
+    }
+    @keyframes fill { to { width: var(--width); } }
+    
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00e5ff55;
+    }
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .project-card h3 {
+      color: #00e5ff;
+      margin: 5px 0;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    
+    /* Contact */
+    .contact a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sami Ullah</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="about">
+  <img src="/Sami Working/assest/samiibrahim.webp" alt="Sami Ullah">
+  <div class="hero-text">
+    <h2>Full Stack Developer</h2>
+    <p>Senior Angular & ASP.NET Core Web API Developer | Business Analysis | Quality Assurance</p>
+    <p>3 years of professional experience delivering robust, scalable, and user-friendly applications. Experienced in leading teams, analyzing business needs, and ensuring quality in every delivery.</p>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+  <div class="bar">
+    <div class="bar-name">Angular & TypeScript</div>
+    <div class="bar-fill"><div style="--width: 95%"></div></div>
+  </div>
+  <div class="bar">
+    <div class="bar-name">ASP.NET Core Web API</div>
+    <div class="bar-fill"><div style="--width: 90%"></div></div>
+  </div>
+  <div class="bar">
+    <div class="bar-name">HTML & CSS</div>
+    <div class="bar-fill"><div style="--width: 90%"></div></div>
+  </div>
+  <div class="bar">
+    <div class="bar-name">Business Analysis</div>
+    <div class="bar-fill"><div style="--width: 85%"></div></div>
+  </div>
+  <div class="bar">
+    <div class="bar-name">Quality Assurance</div>
+    <div class="bar-fill"><div style="--width: 80%"></div></div>
+  </div>
+  <div class="bar">
+    <div class="bar-name">SQL Server & PostgreSQL</div>
+    <div class="bar-fill"><div style="--width: 85%"></div></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+    <img src="/Sami Working/assest/orderboking.jpg" alt="Online Booking">
+    <h3>Online Booking</h3>
+    <p>Online booking system with real-time availability, secure payments, and user-friendly UI.</p>
+  </div>
+  <div class="project-card">
+    <img src="/Sami Working/assest/f2.webp" alt="Flour Management">
+    <h3>Flour Management System</h3>
+    <p>Comprehensive inventory and sales tracking system for flour mills.</p>
+  </div>
+  <div class="project-card">
+    <img src="/Sami Working/assest/c2.png" alt="Construction Management">
+    <h3>Construction Management</h3>
+    <p>Project planning, resource allocation, and reporting for construction companies.</p>
+  </div>
+  <div class="project-card">
+    <img src="/Sami Working/assest/d2.png" alt="Doctor & Pharmacy">
+    <h3>Doctor & Pharmacy Management</h3>
+    <p>Appointment booking, medical records, and pharmacy sales integration.</p>
+  </div>
+  <div class="project-card">
+    <img src="/Sami Working/assest/finance.webp" alt="Finance Management">
+    <h3>Finance Management</h3>
+    <p>General ledger, aging reports, reconciliations, and invoicing modules.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>Phone: <a href="tel:03132334173">03132334173</a></p>
+  <p>Email: <a href="mailto:sami@example.com">sami@example.com</a></p>
+  <p>LinkedIn: <a href="#">linkedin.com/in/samiullah</a></p>
+  <p>GitHub: <a href="#">github.com/samiullah</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Sami Ullah — Full Stack Developer
+</footer>
+
+</body>
+</html>
